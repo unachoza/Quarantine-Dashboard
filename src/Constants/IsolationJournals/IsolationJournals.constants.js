@@ -1,0 +1,9 @@
+const isolationJournals = {
+  day1: {
+    promptContext:
+      'I’ve always kept a journal. The bookcase in my childhood bedroom is filled with dozens of colorful notebooks, each one detailing a new chapter in my life. The pages read like conversations with myself, expressed in thick, swooping pen strokes: fever-dream visions for the future, lies about late-night adventures I never took but wished I had, thinly veiled autobiographical short stories driven by aspirational female protagonists, bad poetry, and lists, always lists—of dos, don’ts, and dreams.While stuck at home, I’ve been revisiting some of these entries and mostly chuckling and cringing at my younger self.Throughout, I’ve noticed a pattern—one that still applies to my writing practice: I tack a name at the top of the page, and think of what I’m writing as a kind of letter. (In one of my childhood diaries, I began each entry with “Dear Daddy Long Legs”—inspired by the spider I once tried to keep as a “pet, ” and the epistolary novel by Jean Webster).It’s often easier for me to start or to get unstuck when I conceive of writing as having an addressee at the other end.It helps me say what I want to say, and to fall into a more natural, conversational rhythm without overthinking.',
+
+    prompt:
+      'Write a letter to a stranger—someone imaginary, someone you met once, someone you only know from a distance. Tell them any and everything: when you first noticed them and what has happened since, how you’d like your day to start and to end, or what’s been on your mind. Or tell them a story about a time when something difficult led you to an unexpected, interesting, maybe even wondrous place. You may be stuck inside four walls, but there are no boundaries. Say whatever you want to say, whatever you think they need to hear.',
+  },
+};
