@@ -47,13 +47,16 @@ const isolationJournals = {
     prompt: '',
     unparsed: '',
   },
-  day2: {
+  day9: {
     promptContext: '',
     prompt: '',
     unparsed: '',
   },
-  day2: {
+  day10: {
     promptContext: '',
     prompt: '',
   },
 };
+//////////Where the rest of the prompts live//////
+//https://www.instagram.com/suleikajaouad/
+//https://us3.campaign-archive.com/home/?u=d2c55affd203a13862d805436&id=b6a66c3665
