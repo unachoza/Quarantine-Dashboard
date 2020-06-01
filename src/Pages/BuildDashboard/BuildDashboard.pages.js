@@ -4,7 +4,9 @@ import Onboarding from 'Components/Onboarding/Onboarding.component';
 const BuildDashboard = () => {
   return (
     <div className="BuildDashboard__container">
-      <div className="buildDashboard__title"><strong>Build Your Dashboard</strong></div>
+      <div className="buildDashboard__title">
+        <strong>Build Your Dashboard</strong>
+      </div>
       <Onboarding />
       <section>
         <ul>
@@ -34,6 +36,9 @@ const BuildDashboard = () => {
           <li>shoping lists</li>
           <li>kids activities</li>
           <li>News</li>
+          <li>Hair Diary</li>
+          {/* photo upload */}
+
           {/* president updates, governor updates, feel good stories, animals */}
         </ul>
       </section>
