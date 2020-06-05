@@ -6,3 +6,49 @@
 
 /* font-family: 'Oswald', sans-serif;
 font-family: 'Playfair Display', serif; */
+.App {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+body {
+  background-color: black;
+  overflow: hidden;
+}
+.background {
+  position: absolute;
+  top: -900px;
+  bottom: -900px;
+  left: -900px;
+  right: -900px;
+  z-index: 0;
+  background: linear-gradient(to bottom,#F2F2F8 1%,#363636 65%, #474747 66%, #cc527a 72%, #e8175d 85%, #a8a7a7 87%, #f2f2f2 100%);
+}
+.effect-blurry {
+  -webkit-filter: blur(900px);
+  filter: blur(900px);
+}
+.effect-grain {
+  -webkit-filter: url(#grain);
+  filter: url(#grain);
+}
+.effect-paper {
+  -webkit-filter: url(#paper);
+  filter: url(#paper);
+}
+.colors-container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70vh;
+  width: calc(0.8 * 70vh);
+  background-color: black;
+  box-shadow: 10px 30px 100px 0px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+}

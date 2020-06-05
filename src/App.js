@@ -5,12 +5,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       Quarantine Dashboard
-      <div className="pages">
-        <UserDashboard />
-        <BuildDashboard />
-      </div>
+      <UserDashboard />
+      <BuildDashboard />
+      <div className="pages"></div>
     </div>
   );
 }
