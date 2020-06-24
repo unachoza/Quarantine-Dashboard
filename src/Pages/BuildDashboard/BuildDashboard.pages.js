@@ -1,5 +1,6 @@
 import React from 'react';
 import Onboarding from 'Components/Onboarding/Onboarding.component';
+import 'Pages/BuildDashboard/BuildDashboard.styles.css';
 
 const BuildDashboard = () => {
   return (

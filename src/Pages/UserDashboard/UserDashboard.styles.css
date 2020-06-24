@@ -1,0 +1,6 @@
+.UserDashboard__container {
+  border: solid rgb(161, 42, 161) 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

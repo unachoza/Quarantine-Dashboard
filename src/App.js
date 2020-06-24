@@ -5,9 +5,8 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      Quarantine Dashboard
-      <UserDashboard />
+    <div className="app-container">
+      <div style={{ fontSize: '60px', textAlign: 'center' }}>Quarantine Dashboard</div>
       <BuildDashboard />
       <div className="pages"></div>
     </div>

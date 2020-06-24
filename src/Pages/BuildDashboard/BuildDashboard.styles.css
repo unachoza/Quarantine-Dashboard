@@ -1,0 +1,6 @@
+.BuildDashboard__container {
+  border: solid pink 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
