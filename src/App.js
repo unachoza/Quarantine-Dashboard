@@ -11,7 +11,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="app-container">
-        <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '60px' }}>{USER.name}'s Dashboard</div>
         <MiniDrawer />
         <BuildDashboard />
         <div className="pages"></div>

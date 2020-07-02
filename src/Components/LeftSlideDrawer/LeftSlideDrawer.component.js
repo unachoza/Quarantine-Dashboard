@@ -25,6 +25,7 @@ import ReceiptIcon from '@material-ui/icons/Receipt';
 import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty';
 import MailIcon from '@material-ui/icons/Mail';
 import CustomButton from 'Components/CustomButton/Button.component';
+import { USER } from 'Constants/User.js';
 
 const drawerWidth = 240;
 
@@ -172,6 +173,7 @@ export default function MiniDrawer() {
         <Divider />
       </Drawer>
       <main className={classes.content}>
+        <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '60px' }}>{USER.name}'s Dashboard</div>
         <div className={classes.toolbar} />
         <Typography paragraph>Some text, but not too much text; just a reasonable amount.</Typography>
         <Typography paragraph>Some text, but not too much text; just a reasonable amount.</Typography>
