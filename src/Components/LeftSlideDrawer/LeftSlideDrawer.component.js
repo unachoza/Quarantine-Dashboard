@@ -13,6 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import SimpleModal from 'Components/SimpleModal/Modal.component';
 
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -171,21 +172,12 @@ export default function MiniDrawer() {
         {/* <Divider /> */}
         <List className={classes.list}>
           {IconObjectArray.map((object, i) => (
-            <Button
-              classes={{
-                // component:
-                root: classes.root, // class name, e.g. `classes-nesting-root-x`
-                label: classes.label, // class name, e.g. `classes-nesting-label-x`
-              }}
-              className={classes.root}
-              fullWidth
-              variant="contained"
-              key={i}
-            >
+            <Button onClick={makeList} className={classes.root} fullWidth variant="contained" key={i}>
               <ListItemIcon>{object.icon}</ListItemIcon>
               <ListItemText primary={object.buttonName} />
             </Button>
           ))}
+          <SimpleModal />
         </List>
         {/* <Divider /> */}
       </Drawer>
