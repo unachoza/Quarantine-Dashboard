@@ -1,5 +1,5 @@
 export const USER = {
-  name: 'Juliet KAZAM ',
+  name: 'Kiki KAZAM ',
 };
 
 export const COLORS = {

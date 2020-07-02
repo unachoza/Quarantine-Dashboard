@@ -10,7 +10,7 @@ import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty';
 export const IconObjectArray = [
   {
     icon: <ReceiptIcon />,
-    buttonName: 'Create a Todo List',
+    buttonName: 'Create Todo List',
   },
   {
     icon: <BatteryChargingFullIcon />,
