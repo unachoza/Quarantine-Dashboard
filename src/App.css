@@ -3,6 +3,8 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  color: white;
+  background-color: #4d8cd9;
 }
 #root {
   height: 100vh;
@@ -27,7 +29,7 @@ font-family: 'Playfair Display', serif; */
   width: 100vw;
   margin: 0;
   padding: 0;
-  border: solid red 9px;
+  /* border: solid red 9px; */
 }
 
 .pages {

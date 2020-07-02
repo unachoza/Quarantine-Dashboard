@@ -1,5 +1,6 @@
 import React from 'react';
 import Onboarding from 'Components/Onboarding/Onboarding.component';
+import { TodoApp } from 'Components/TodoList/TodoList.component';
 import 'Pages/BuildDashboard/BuildDashboard.styles.css';
 
 const BuildDashboard = () => {
@@ -9,6 +10,7 @@ const BuildDashboard = () => {
         <strong>Build Your Dashboard</strong>
       </div>
       <Onboarding />
+      <TodoApp />
       <section>
         <ul>
           <li>Reading List</li>
