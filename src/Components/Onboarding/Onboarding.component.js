@@ -1,5 +1,13 @@
 import React from 'react';
-const typesOfStats = ['Goals', 'Countdowns', 'Calendars', 'News'];
+import 'Components/Onboarding/Onboarding.styles.css';
+
+const typesOfStats = [
+  'Build Your Todo List',
+  'Create Your Goals List',
+  'Add Countdowns',
+  'Create a Calendars',
+  'Add News Widget',
+];
 const Onboarding = () => {
   const handleClick = (e) => {
     console.log(e.target, 'was clicked');

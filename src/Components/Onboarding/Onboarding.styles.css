@@ -1,0 +1,21 @@
+button {
+  border: solid 2px #004ac7;
+  border-radius: 10px;
+  background-color: white;
+  color: #004ac7;
+  height: 45px;
+  width: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: space-between;
+  transition: transform 0.3s;
+  margin: 20px;
+}
+button:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+button:active {
+  outline: none;
+  transform: translateY(-1px);
+}

@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { List, Paper } from '@material-ui/core';
 import TodoListItem from 'Components/TodoList/TodoListItem.component';
+
 const TodoList = memo((props) => (
   <>
     {props.items.length > 0 && (
