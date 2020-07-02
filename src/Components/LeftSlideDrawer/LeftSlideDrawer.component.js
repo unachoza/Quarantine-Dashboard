@@ -8,6 +8,7 @@ import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -16,13 +17,21 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
+import AspectRatioIcon from '@material-ui/icons/AspectRatio';
+import BatteryChargingFullIcon from '@material-ui/icons/BatteryChargingFull';
+import CameraSharpIcon from '@material-ui/icons/CameraSharp';
+import WatchIcon from '@material-ui/icons/Watch';
+import ReceiptIcon from '@material-ui/icons/Receipt';
+import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty';
 import MailIcon from '@material-ui/icons/Mail';
+import CustomButton from 'Components/CustomButton/Button.component';
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    '& > *': {},
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -73,9 +82,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
-    // toolbar:
-    // necessary for content to be below app bar
-    // ...theme.mixins.toolbar,
+    toolbar:
+      // necessary for content to be below app bar
+      { ...theme.mixins.toolbar },
   },
   toolbarMargin: {
     ...theme.mixins.toolbar,
@@ -84,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+  },
+  theseButtons: {
+    height: '50px',
   },
 }));
 
@@ -98,6 +110,10 @@ export default function MiniDrawer() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+  const makeList = (e) => {
+    console.log('clicking make a list', e);
   };
 
   return (
@@ -146,22 +162,14 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
+          {IconObjectArray.map((object, i) => (
+            <Button className={classes.root} fullWidth variant="contained" key={i}>
+              <ListItemIcon>{object.icon}</ListItemIcon>
+              <ListItemText primary={object.buttonName} />
+            </Button>
           ))}
         </List>
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
@@ -171,3 +179,47 @@ export default function MiniDrawer() {
     </div>
   );
 }
+
+const buttonCreateListTypes = [
+  'Create a Todo List',
+  'Make a Goals List',
+  'Send email',
+  'Drafts',
+  'more',
+  'of',
+  'these ',
+];
+const buttonIcons = [
+  'RecieptIcon',
+  'BatteryChargingFullIcon',
+  'HourglassEmptyIcon',
+  'AspectRatioIcon',
+  'WatchIcon',
+  'CameraSharpIcon',
+];
+const IconObjectArray = [
+  {
+    icon: <ReceiptIcon />,
+    buttonName: 'Create a Todo List',
+  },
+  {
+    icon: <BatteryChargingFullIcon />,
+    buttonName: 'Make a Goals List',
+  },
+  {
+    icon: <HourglassEmptyIcon />,
+    buttonName: 'Countdown',
+  },
+  {
+    icon: <AspectRatioIcon />,
+    buttonName: 'Stufff',
+  },
+  {
+    icon: <WatchIcon />,
+    buttonName: 'Import Dates',
+  },
+  {
+    icon: <CameraSharpIcon />,
+    buttonName: 'News',
+  },
+];
