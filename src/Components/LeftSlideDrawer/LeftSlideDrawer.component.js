@@ -13,28 +13,25 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
+
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import AspectRatioIcon from '@material-ui/icons/AspectRatio';
-import BatteryChargingFullIcon from '@material-ui/icons/BatteryChargingFull';
-import CameraSharpIcon from '@material-ui/icons/CameraSharp';
-import WatchIcon from '@material-ui/icons/Watch';
-import ReceiptIcon from '@material-ui/icons/Receipt';
-import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty';
-import MailIcon from '@material-ui/icons/Mail';
-import CustomButton from 'Components/CustomButton/Button.component';
-import { USER } from 'Constants/User.js';
 
-const drawerWidth = 240;
+import { USER } from 'Constants/User.js';
+import { IconObjectArray } from 'Constants/Styling.js';
+
+const drawerWidth = 259;
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    ul: {
+      border: 'none',
+    },
     display: 'flex',
     '& > *': {},
   },
   appBar: {
+    backgroundColor: 'blue',
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
@@ -42,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   appBarShift: {
+    backgroundColor: 'blue',
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
@@ -56,11 +54,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   drawer: {
+    border: 'none',
+    backgroundColor: 'blue',
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: 'nowrap',
   },
   drawerOpen: {
+    border: 'none',
+    backgroundColor: 'blue',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
@@ -79,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   toolbar: {
+    // backgroundColor: primary,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -97,6 +100,10 @@ const useStyles = makeStyles((theme) => ({
   },
   theseButtons: {
     height: '50px',
+  },
+  list: {
+    border: 'none',
+    paddingTop: '20px',
   },
 }));
 
@@ -139,7 +146,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Quarantine Dashboard
+            Quarantine Dashboard !!!
           </Typography>
         </Toolbar>
       </AppBar>
@@ -161,67 +168,32 @@ export default function MiniDrawer() {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </div>
-        <Divider />
-        <List>
+        {/* <Divider /> */}
+        <List className={classes.list}>
           {IconObjectArray.map((object, i) => (
-            <Button className={classes.root} fullWidth variant="contained" key={i}>
+            <Button
+              classes={{
+                // component:
+                root: classes.root, // class name, e.g. `classes-nesting-root-x`
+                label: classes.label, // class name, e.g. `classes-nesting-label-x`
+              }}
+              className={classes.root}
+              fullWidth
+              variant="contained"
+              key={i}
+            >
               <ListItemIcon>{object.icon}</ListItemIcon>
               <ListItemText primary={object.buttonName} />
             </Button>
           ))}
         </List>
-        <Divider />
+        {/* <Divider /> */}
       </Drawer>
       <main className={classes.content}>
         <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '60px' }}>{USER.name}'s Dashboard</div>
         <div className={classes.toolbar} />
-        <Typography paragraph>Some text, but not too much text; just a reasonable amount.</Typography>
-        <Typography paragraph>Some text, but not too much text; just a reasonable amount.</Typography>
+        <Typography paragraph>Things I'm counting and keeping track of</Typography>
       </main>
     </div>
   );
 }
-
-const buttonCreateListTypes = [
-  'Create a Todo List',
-  'Make a Goals List',
-  'Send email',
-  'Drafts',
-  'more',
-  'of',
-  'these ',
-];
-const buttonIcons = [
-  'RecieptIcon',
-  'BatteryChargingFullIcon',
-  'HourglassEmptyIcon',
-  'AspectRatioIcon',
-  'WatchIcon',
-  'CameraSharpIcon',
-];
-const IconObjectArray = [
-  {
-    icon: <ReceiptIcon />,
-    buttonName: 'Create a Todo List',
-  },
-  {
-    icon: <BatteryChargingFullIcon />,
-    buttonName: 'Make a Goals List',
-  },
-  {
-    icon: <HourglassEmptyIcon />,
-    buttonName: 'Countdown',
-  },
-  {
-    icon: <AspectRatioIcon />,
-    buttonName: 'Stufff',
-  },
-  {
-    icon: <WatchIcon />,
-    buttonName: 'Import Dates',
-  },
-  {
-    icon: <CameraSharpIcon />,
-    buttonName: 'News',
-  },
-];
