@@ -112,6 +112,19 @@ export default function MiniDrawer() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+    console.log(openModal);
+    console.log('i was clicked');
+  };
+
+  const handleClose = () => {
+    setOpenModal(false);
+    console.log(openModal);
+    console.log('i was clicked');
+  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -169,17 +182,15 @@ export default function MiniDrawer() {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </div>
-        {/* <Divider /> */}
         <List className={classes.list}>
           {IconObjectArray.map((object, i) => (
-            <Button onClick={makeList} className={classes.root} fullWidth variant="contained" key={i}>
-              <ListItemIcon>{object.icon}</ListItemIcon>
+            <Button onClick={handleOpenModal} className={classes.root} fullWidth variant="contained" key={i}>
+              <ListItemIcon onClick={handleOpenModal}>{object.icon}</ListItemIcon>
               <ListItemText primary={object.buttonName} />
             </Button>
           ))}
-          <SimpleModal />
+          <SimpleModal openModal={openModal} handleClose={handleClose} />
         </List>
-        {/* <Divider /> */}
       </Drawer>
       <main className={classes.content}>
         <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '60px' }}>{USER.name}'s Dashboard</div>

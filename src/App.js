@@ -12,7 +12,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="app-container">
         <MiniDrawer />
-        <BuildDashboard />
+        {/* <BuildDashboard /> */}
         <div className="pages"></div>
       </div>
     </ThemeProvider>

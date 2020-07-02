@@ -18,11 +18,11 @@ export const IconObjectArray = [
   },
   {
     icon: <HourglassEmptyIcon />,
-    buttonName: 'Countdown',
+    buttonName: 'Add a Countdown',
   },
   {
     icon: <AspectRatioIcon />,
-    buttonName: 'Stufff',
+    buttonName: 'Add News Widget',
   },
   {
     icon: <WatchIcon />,

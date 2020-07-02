@@ -10,7 +10,7 @@ const BuildDashboard = () => {
         <strong>Build Your Dashboard</strong>
       </div>
       <Onboarding />
-      <TodoApp />
+      {/* <TodoApp /> */}
     </div>
   );
 };
