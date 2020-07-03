@@ -188,13 +188,16 @@ export default function MiniDrawer() {
               <ListItemText primary={object.buttonName} />
             </Button>
           ))}
-          {/* <SimpleModal openModal={openModal} handleClose={handleClose} /> */}
+          <SimpleModal openModal={openModal} handleClose={handleClose} />
         </List>
       </Drawer>
+
+      {/* ////////////EVERYTHING HAPPENS HERE//// */}
 
       <main className={classes.content}>
         <Main />
       </main>
+      {/* ///////////////EVERYTHING HAPPENS HERE//////////// */}
     </div>
   );
 }
