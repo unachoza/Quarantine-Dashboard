@@ -111,8 +111,8 @@ const useStyles = makeStyles((theme) => ({
 export default function MiniDrawer() {
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
-  const [openModal, setOpenModal] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
+  const [openModal, setOpenModal] = React.useState(true);
 
   const handleOpenModal = () => {
     setOpenModal(true);
