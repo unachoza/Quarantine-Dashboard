@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ThemeProvider, mStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import theme from 'UI/Theme.js';
-import UserDashboard from 'Pages/UserDashboard/UserDashboard.pages.js';
-import BuildDashboard from 'Pages/BuildDashboard/BuildDashboard.pages.js';
-import MiniDrawer from 'Components/LeftSlideDrawer/LeftSlideDrawer.component.js';
+import MiniDrawer from 'Components/LeftSlideDrawer/Main&Drawer.component.js';
 import './App.css';
 import Modal from '@material-ui/core/Modal';
-import SimpleModal from 'Components/SimpleModal/Modal.component';
-import { USER } from 'Constants/User';
 
 const App = () => {
   const [immediateOpen, setImmediateOpen] = useState(false);
@@ -19,9 +15,13 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <div className="app-container">
         <MiniDrawer />
-        <Modal openModal={immediateOpen} />
-        {/* <BuildDashboard /> */}
-        <div className="pages"></div>
+        {/* //opening model to get user input for name */}
+        {/* <Modal
+          open={immediateOpen}
+          aria-labelledby="User Name"
+          aria-describedby="enter user name to personalize dashboard"
+        >
+        </Modal> */}
       </div>
     </ThemeProvider>
   );

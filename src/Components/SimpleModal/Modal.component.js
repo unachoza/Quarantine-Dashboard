@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import Main from 'Pages/Main/Main.page';
+
 import { TodoApp } from 'Components/TodoList/TodoListCreator.component';
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -60,8 +62,11 @@ export default function SimpleModal(props) {
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
+        <div>
+          <Main />
+        </div>
         {/* <TodoApp /> */}
-        {body}
+        {/* {body} */}
       </Modal>
     </div>
   );

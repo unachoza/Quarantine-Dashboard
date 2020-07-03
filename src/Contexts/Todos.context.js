@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import useLocalStorageReducer from '../hooks/useLocalStorageReducer';
+import useLocalStorageReducer from 'Hooks/useLocalStorage.hook';
 import todosReducer from 'Reducers/todos.reducer';
 
 const defaultTodos = [

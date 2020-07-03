@@ -7,18 +7,17 @@ import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import SimpleModal from 'Components/SimpleModal/Modal.component';
-
+import Main from 'Pages/Main/Main.page.js';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import { USER } from 'Constants/User.js';
+// import { USER } from 'Constants/User.js';
 import { IconObjectArray } from 'Constants/Styling.js';
 
 const drawerWidth = 259;
@@ -189,13 +188,12 @@ export default function MiniDrawer() {
               <ListItemText primary={object.buttonName} />
             </Button>
           ))}
-          <SimpleModal openModal={openModal} handleClose={handleClose} />
+          {/* <SimpleModal openModal={openModal} handleClose={handleClose} /> */}
         </List>
       </Drawer>
+
       <main className={classes.content}>
-        <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '60px' }}>{USER.name}'s Dashboard</div>
-        <div className={classes.toolbar} />
-        <Typography paragraph>Things I'm counting and keeping track of</Typography>
+        <Main />
       </main>
     </div>
   );

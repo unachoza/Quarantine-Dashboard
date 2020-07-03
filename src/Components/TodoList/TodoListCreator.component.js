@@ -3,7 +3,7 @@ import React, { memo, useContext } from 'react';
 import { useInputValue, useTodos } from 'Hooks/UseTodos.hooks';
 import Button from '@material-ui/core/Button';
 import Layout from 'Components/TodoList/Layout.component';
-import { DispatchContext } from 'Contexts/todos.context';
+import { DispatchContext } from 'Contexts/Todos.context';
 import { ADD_TODO } from 'Actions/actions.js';
 import { AddTodo } from 'Components/TodoList/AddTodo.component';
 import TodoList from 'Components/TodoList/TodoListMaterial.component';
