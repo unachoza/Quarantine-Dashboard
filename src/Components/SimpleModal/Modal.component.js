@@ -53,9 +53,6 @@ export default function SimpleModal(props) {
 
   return (
     <div>
-      <button type="button" onClick={handleOpenModal}>
-        Open Modal Here
-      </button>
       <Modal
         open={props.openModal}
         onClose={props.handleClose}
