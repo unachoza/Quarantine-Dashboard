@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const AutoCounter = () => {
+export const AutoCounter = () => {
+  const [count, setCount] = useState(null);
+  const [startDate, setStartDate] = useState(null);
+
+  const add = () => setCount(count + 1);
+  const subtract = () => setCount(count - 1);
+
   const addAutoCounter = () => {
     //show form to make autocounter
     //title of count
@@ -10,6 +16,9 @@ const AutoCounter = () => {
     //submit button
     //render all those things
   };
+  const initializeCounter = () => {
+    return <div>{count} Days </div>;
+  };
   return (
     <div className="AutoCounter__container">
       AutoCounter
@@ -18,4 +27,4 @@ const AutoCounter = () => {
   );
 };
 
-export default AutoCounter;
+export const counter = () => {};

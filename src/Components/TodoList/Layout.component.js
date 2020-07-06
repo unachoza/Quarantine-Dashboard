@@ -1,5 +1,5 @@
 import React, { memo, useState } from 'react';
-import { AppBar, Toolbar, Typography, Paper } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Paper, TextField } from '@material-ui/core';
 
 const Layout = memo((props) => {
   const [title, setTitle] = useState('Create a List');
@@ -15,6 +15,13 @@ const Layout = memo((props) => {
       <AppBar color="primary" position="static" style={{ height: 64 }}>
         <Toolbar style={{ height: 64 }}>
           <Typography color="inherit" onClick={titleList}>
+            <TextField
+              disableUnderline={true}
+              placeholder="a List"
+              value={props.inputValue}
+              onChange={props.onInputChange}
+              onKeyPress={props.onInputKeyPress}
+            />
             {title}
           </Typography>
         </Toolbar>
