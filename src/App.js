@@ -6,7 +6,7 @@ import './App.css';
 import Modal from '@material-ui/core/Modal';
 
 const App = () => {
-  const [immediateOpen, setImmediateOpen] = useState(false);
+  const [immediateOpen, setImmediateOpen] = useState(true);
 
   useEffect(() => {
     setImmediateOpen(true);
@@ -20,8 +20,7 @@ const App = () => {
           open={immediateOpen}
           aria-labelledby="User Name"
           aria-describedby="enter user name to personalize dashboard"
-        >
-        </Modal> */}
+        ></Modal> */}
       </div>
     </ThemeProvider>
   );

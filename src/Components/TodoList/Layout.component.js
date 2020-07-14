@@ -15,14 +15,7 @@ const Layout = memo((props) => {
       <AppBar color="primary" position="static" style={{ height: 64 }}>
         <Toolbar style={{ height: 64 }}>
           <Typography color="inherit" onClick={titleList}>
-            <TextField
-              disableUnderline={true}
-              placeholder="a List"
-              value={props.inputValue}
-              onChange={props.onInputChange}
-              onKeyPress={props.onInputKeyPress}
-            />
-            {title}
+            Create a List
           </Typography>
         </Toolbar>
       </AppBar>

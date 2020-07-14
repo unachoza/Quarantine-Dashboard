@@ -133,9 +133,9 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
-  const makeList = (e) => {
-    console.log('clicking make a list', e);
-  };
+  // const makeList = (e) => {
+  //   console.log('clicking make a list', e);
+  // };
 
   return (
     <div className={classes.root}>

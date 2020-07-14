@@ -1,9 +1,10 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import 'Pages/UserDashboard/UserDashboard.styles.css';
 import { USER } from 'Constants/User.js';
 import DatePicker from 'Components/Calendar/Calendar.component';
+import { Counter } from 'Components/AutoCounter/AutoCounter.component';
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -21,6 +22,7 @@ const Main = () => {
       <Typography paragraph>Things I'm counting and keeping track of</Typography>
       Landing on the main page blah blah blah
       <DatePicker />
+      <Counter />
     </div>
   );
 };
