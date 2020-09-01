@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import 'Pages/UserDashboard/UserDashboard.styles.css';
 import { USER } from 'Constants/User.js';
 import DatePicker from 'Components/Calendar/Calendar.component';
-import { Counter } from 'Components/AutoCounter/AutoCounter.component';
+import Counter from 'Components/AutoCounter/AutoCounter.component';
 
 const useStyles = makeStyles((theme) => ({
   content: {

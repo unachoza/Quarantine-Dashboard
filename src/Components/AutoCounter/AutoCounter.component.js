@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
-export const Counter = () => {
+const Counter = () => {
   const [count, setCount] = useState(0);
-  const [startDate, setStartDate] = useState(null);
 
-  const add = () => setCount(count + 1);
-  const subtract = () => setCount(count - 1);
-
+  // Create handleIncrement event handler
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
   const addAutoCounter = () => {
     //show form to make autocounter
     //title of count
@@ -18,11 +20,12 @@ export const Counter = () => {
   };
 
   return (
-    <div className="AutoCounter__container">
-      Current Count is {count}
+    <div className="AutoCounter__container" style={{ margin: '20px' }}>
+      <Typography variant="h6">{count} Blog Posts</Typography>
       <br />
-      <button onClick={add}>+</button>
-      <button onClick={subtract}>-</button>
+      <button onClick={handleIncrement}>+</button>
+      <Button />
     </div>
   );
 };
+export default Counter;

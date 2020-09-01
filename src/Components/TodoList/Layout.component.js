@@ -10,10 +10,17 @@ const Layout = memo((props) => {
   return (
     <Paper
       elevation={0}
-      style={{ padding: 0, margin: 0, backgroundColor: '#fafafa', border: 'solid', width: 'fit-content' }}
+      style={{
+        padding: 0,
+        margin: 0,
+        backgroundColor: '#fafafa',
+        border: 'solid',
+        width: '300px',
+        height: 'fit-content',
+      }}
     >
-      <AppBar color="primary" position="static" style={{ height: 64 }}>
-        <Toolbar style={{ height: 64 }}>
+      <AppBar color="primary" position="static" style={{ height: 45 }}>
+        <Toolbar>
           <Typography color="inherit" onClick={titleList}>
             Create a List
           </Typography>

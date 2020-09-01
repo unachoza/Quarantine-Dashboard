@@ -13,7 +13,7 @@ export const TodoApp = memo((props) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
-        margin: theme.spacing(3),
+        margin: theme.spacing(2),
       },
     },
   }));
@@ -29,7 +29,7 @@ export const TodoApp = memo((props) => {
   };
 
   return (
-    <Layout style={{ width: 'fit-content' }}>
+    <Layout style={{ width: '300px' }}>
       <AddTodo
         inputValue={inputValue}
         onInputChange={changeInput}
@@ -39,7 +39,7 @@ export const TodoApp = memo((props) => {
       <TodoList items={todos} onItemCheck={(idx) => checkTodo(idx)} onItemRemove={(idx) => removeTodo(idx)} />
 
       <div className={classes.root}>
-        <Button size="large" variant="contained" color="primary" onClick={saveTodoListToDashboard}>
+        <Button variant="contained" color="primary" onClick={saveTodoListToDashboard}>
           Save
         </Button>
       </div>

@@ -6,7 +6,7 @@ const TodoList = memo((props) => {
   return (
     <>
       {props.items.length > 0 && (
-        <Paper style={{ margin: 16 }}>
+        <Paper style={{ margin: 10 }}>
           <List style={{ overflow: 'scroll', border: 'none', width: '100%' }}>
             {props.items.map((todo, idx) => (
               <TodoListItem
@@ -15,6 +15,7 @@ const TodoList = memo((props) => {
                 divider={idx !== props.items.length - 1}
                 onButtonClick={() => props.onItemRemove(idx)}
                 onCheckBoxToggle={() => props.onItemCheck(idx)}
+                style={{ padding: 0 }}
               />
             ))}
           </List>
