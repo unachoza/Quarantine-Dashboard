@@ -26,5 +26,11 @@ const theme = createMuiTheme({
       fontWeight: 800,
     },
   },
+  overrides: {
+    MuiLinearProgress: {
+      height: '24px',
+      borderRadius: '3px',
+    },
+  },
 });
 export default theme;
